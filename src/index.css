@@ -1,0 +1,273 @@
+* {
+    font-family: "Raleway", sans-serif;
+  }
+   /* footer arrow section */
+   .arrow-list li::before {
+    content: '➤'; /* Unicode character for the arrow */
+    color: white; /* Arrow color */
+    margin-right: 10px; /* Spacing between the arrow and text */
+    display: inline-block; /* Align with text */
+  }
+  
+  
+  .footer-link {
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s ease; /* Smooth transition */
+  }
+  
+  .footer-link:hover {
+    transform: translateY(-5px); /* Slight bounce up on hover */
+    transition: transform 0.3s ease;
+  }
+
+  .footer-link i {
+    margin-right: 8px; /* Space between icon and text */
+  }
+  /* Custom hover effect for navbar items */
+.navbar-nav .nav-link:hover {
+  color: #e03334 !important; /* Red color on hover */
+  transition: color 0.4s ease; /* Smooth color transition */
+}
+/* Make the dropdown menu background slightly dim */
+.navbar-nav .dropdown-menu {
+  background-color: rgb(254, 254, 254) !important; /* Slightly dimmed transparent black */
+}
+
+/* Custom hover effect for dropdown items */
+.navbar-nav .dropdown-menu .dropdown-item:hover {
+  background-color: #e03334 !important; /* Light red background on hover */
+  color: #fcfbfb !important; /* Black text */
+  transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+/* Optionally add a hover effect to the dropdown toggle itself */
+.navbar-nav .dropdown-toggle:hover {
+  color: #e03334 !important; /* Red text color for the dropdown toggle */
+}
+/* Add darker shadow to the navbar */
+.navbar {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Darker shadow */
+  transition: box-shadow 0.3s ease-in-out; /* Smooth transition */
+}
+
+.navbar:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); /* More intense shadow on hover */
+}
+
+/* Technology page section */
+.background-container {
+  position: relative;
+  background-image: url('technologypg.jpg'); /* Your image URL */
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0; /* Adjust padding as needed */
+  z-index: 1;
+}
+
+.background-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)); /* Black fade from right to left */
+  z-index: 2; /* Ensure the fade is above the image */
+}
+
+/* Add some padding to the container holding the cards */
+.container {
+  position: relative;
+  z-index: 3; /* Ensure cards are above both the background and the gradient */
+  
+}
+/* cards section */
+.stagger-card {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Optional: Add subtle shadow */
+}
+
+.stagger-card img {
+  height: 250px;
+  
+
+}
+
+/* Stagger effect */
+.stagger-card.up {
+  margin-top: -50px; /* Move card upwards */
+}
+
+.stagger-card.down {
+  margin-top: 40px; /* Move card downwards */
+}
+
+/* card annimation */
+/* Reset the border and style the cards */
+.stagger-card {
+  border: none; /* Remove white border */
+  overflow: hidden;
+  transform: translateY(0);
+  transition: transform 4s ease, opacity 2s ease;
+  opacity: 1;
+  box-shadow: 8px 8px 8px rgb(131, 127, 120); /* Subtle shadow */
+
+}
+
+.stagger-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Animation states */
+.stagger-card.up.animate {
+  transform: translateY(-30px); /* Move up cards further upward */
+  opacity: 1;
+}
+
+.stagger-card.down.animate {
+  transform: translateY(30px); /* Move down cards further downward */
+  opacity: 1;
+}
+
+/* Hide cards when out of view */
+.stagger-card:not(.animate) {
+  opacity: 0;
+  transform: translateY(5);
+}
+
+/* General styling for cards */
+.stagger-card {
+  position: relative;
+  overflow: hidden;
+  border: none;
+}
+
+/* Overlay for the heading */
+/* General styling for cards */
+.card-overlay {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center alignment */
+  color: white; /* White text for contrast */
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.9); /* Shadow for better readability */
+  z-index: 1; /* Ensure it is above the image */
+}
+
+/* Default dimming for images */
+.stagger-card img {
+  transition: all 0.3s ease;
+  filter: brightness(0.7); /* Slightly dim the image by default */
+}
+
+/* Additional dimming on hover */
+.stagger-card:hover img {
+  filter: brightness(0.4); /* Dim the image further on hover */
+}
+/* Media Querie for responsiveness */
+@media (max-width: 768px) {
+  h1 {
+      font-size: 6vw !important; /* Smaller font size for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+      font-size: 8vw !important; /* Smaller font size for mobile phones */
+  }
+  button {
+      font-size: 1rem !important; /* Adjust button font size */
+      padding: 8px 16px !important; /* Adjust button padding */
+  }
+}
+/* three cards flipping */
+.card-container:hover {
+  transform: rotateY(180deg);
+}
+.arrow-list li::before {
+  color: black; /* Black color for the arrow */
+  margin-right: 8px; /* Add space between the arrow and the text */
+}
+/* Beforefooter.css */
+/* Container styling */
+.letter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold; /* Optional: Make the text bold */
+  color: transparent; /* Make the text color invisible */
+  height: 140px;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  font-size: 8rem; /* Set a larger default font size for large screens */
+}
+
+/* Letter styling */
+.letter {
+  display: inline-block;
+  background: linear-gradient(to bottom, rgb(210, 209, 209), transparent); /* Black fading to transparent */
+  -webkit-background-clip: text; /* Clip background to text */
+  background-clip: text;
+  opacity: 0; /* Start invisible */
+  transform: translateY(0px); /* Start below the position */
+  animation: fadeInUp 0.8s ease-out forwards; /* Fade in and move up */
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Start below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End in place */
+  }
+}
+
+/* Responsive font sizes for different screen sizes */
+@media (max-width: 768px) { /* Tablet and below */
+  .letter-container {
+    font-size: 6rem; /* Reduce font size on tablets */
+  }
+}
+
+@media (max-width: 576px) { /* Mobile phones */
+  .letter-container {
+    font-size: 5rem; /* Further reduce font size on smaller devices */
+    height: auto; /* Adjust height if needed */
+  }
+
+  .letter {
+    font-size: 5rem; /* Ensure letters scale down with the container */
+  }
+}
+
+@media (max-width: 576px) {
+  .trusted-section h2 {
+    font-size: 2rem; /* Adjust heading size for small screens */
+  }
+}
+/* philosophy section */
+/* Add this CSS to your main stylesheet */
+.animate-hidden {
+  transform: scale(0.8);
+  opacity: 0;
+  transition: transform 1.5s ease-out, opacity 1.5s ease-out;
+}
+
+.animate-visible {
+  transform: scale(1);
+  opacity: 1;
+  transition: transform 1.5s ease-out, opacity 1.5s ease-out;
+}
+
+.card-text {
+  white-space: normal;
+  line-height: 1.5;
+}
